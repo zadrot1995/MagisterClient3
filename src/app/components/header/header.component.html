@@ -1,0 +1,22 @@
+<!--<nav class="m-0" id="wrap">-->
+<!--  <div class="nav-wrapper">-->
+<!--    <a href="#" class="brand-logo">Logo</a>-->
+<!--    <ul id="nav-mobile" class="right hide-on-med-and-down">-->
+<!--      <li *ngIf="!_authenticationService.isAuthorized()"><a routerLink="sing-in">Sing In</a></li>-->
+<!--      <li *ngIf="!_authenticationService.isAuthorized()"><a routerLink="sing-un">Sing up</a></li>-->
+<!--      <li *ngIf="_authenticationService.isAuthorized()"><a href="">{{_authenticationService.getUserName()}}</a></li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</nav>-->
+<p>
+  <mat-toolbar class="header" fxLayout="row" fxLayoutAlign="space-between center">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Eucalyptyka</span>
+    <span class="example-spacer"></span>
+    <button routerLink="signIn-or-signUp" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>login</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>

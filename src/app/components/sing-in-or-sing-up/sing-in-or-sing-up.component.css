@@ -1,0 +1,25 @@
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.text-row {
+  margin-bottom: 20px;
+}
+
+.main-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.button-row button {
+  margin: 5% 3% 0% 0%;
+  height: 50px;
+  width: 150px;
+}

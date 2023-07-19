@@ -1,0 +1,37 @@
+<div class="particles-container">
+  <div class="particle"></div>
+  <!-- Add more particles as needed -->
+</div>
+<script>
+  // Number of particles to create
+  const numParticles = 100;
+
+  // Function to create particles and apply animation
+  function createParticles() {
+    const particlesContainer = document.querySelector('.particles-container');
+
+    for (let i = 0; i < numParticles; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particlesContainer.appendChild(particle);
+
+      // Set random initial position
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+
+      // Set random animation duration and delay
+      particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      particle.style.animationDelay = `${Math.random() * 5}s`;
+
+      // Set random size
+      const size = Math.random() * 20 + 5;
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+    }
+  }
+
+  // Call the function to create particles on page load
+  createParticles();
+
+</script>
+

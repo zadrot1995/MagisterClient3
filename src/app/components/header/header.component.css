@@ -1,0 +1,11 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; /* Make sure the header appears above other content */
+  background-color: #483247;
+  color: white;
+}

@@ -1,0 +1,23 @@
+.particles-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff00ff; /* Adjust color as needed */
+  border-radius: 50%;
+}
+
+/* Customize particle animation as needed */
+@keyframes moveParticles {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100%, 100%);
+  }
+}
