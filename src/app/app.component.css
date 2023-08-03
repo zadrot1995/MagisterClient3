@@ -7,9 +7,30 @@
 }
 
 .example-sidenav {
-  padding: 20px;
+  padding: 60px;
   background-color: #483247;
   color: white;
   height: auto;
   position: fixed;
+}
+
+.app-button-sign-in {
+  height: 50px;
+  width: 150px;
+}
+
+.app-button-menu {
+  height: 30px;
+  width: 150px;
+}
+.app-margin-Bottom{
+  margin-bottom: 5%;
+}
+
+.app-menu-title-text{
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+.bigger-icon {
+  transform: scale(1.5); /* Adjust the scale factor as needed */
 }
