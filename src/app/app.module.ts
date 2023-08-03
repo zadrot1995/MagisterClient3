@@ -19,6 +19,8 @@ import { PointsComponent } from './components/points/points.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectsCardComponent } from './components/projects-card/projects-card.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,10 @@ const routes: Routes = [
     path: 'sidenav',
     component: SidenavComponent,
   },
+  {
+    path: 'projects',
+    component: ProjectsComponent,
+  },
   ];
 @NgModule({
   declarations: [
@@ -52,7 +58,9 @@ const routes: Routes = [
     SingUpComponent,
     SingInOrSingUpComponent,
     PointsComponent,
-    SidenavComponent
+    SidenavComponent,
+    ProjectsComponent,
+    ProjectsCardComponent
   ],
   imports: [
     BrowserModule,

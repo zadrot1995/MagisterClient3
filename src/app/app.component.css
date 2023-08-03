@@ -12,6 +12,7 @@
   color: white;
   height: auto;
   position: fixed;
+  text-align: center;
 }
 
 .app-button-sign-in {
