@@ -16,6 +16,9 @@ import { SingInOrSingUpComponent } from './components/sing-in-or-sing-up/sing-in
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import { PointsComponent } from './components/points/points.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 const routes: Routes = [
   {
@@ -34,7 +37,10 @@ const routes: Routes = [
     path: 'signIn-or-signUp',
     component: SingInOrSingUpComponent,
   },
-
+  {
+    path: 'sidenav',
+    component: SidenavComponent,
+  },
   ];
 @NgModule({
   declarations: [
@@ -45,7 +51,8 @@ const routes: Routes = [
     SingInComponent,
     SingUpComponent,
     SingInOrSingUpComponent,
-    PointsComponent
+    PointsComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +63,9 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
