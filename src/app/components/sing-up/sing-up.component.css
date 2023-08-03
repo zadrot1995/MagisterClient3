@@ -1,0 +1,49 @@
+.signin-container {
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  display: flex;
+}
+
+.signin-card {
+  width: 50%;
+  text-align: center;
+}
+
+.mat-card-actions {
+  justify-content: center;
+
+}
+
+/* Apply additional styles to make the form larger */
+.mat-form-field {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+/* Make inputs longer */
+.mat-input-element {
+  width: 100%;
+}
+
+/* Style the "Forgot Password" link */
+.forgot-password-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.forgot-password-link a {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.margin{
+  margin: 20px 20px 20px 20px;
+}
