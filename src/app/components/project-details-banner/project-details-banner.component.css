@@ -1,0 +1,10 @@
+/* big-banner.component.css (or your component's CSS file) */
+.big-banner {
+  background-image: url('https://cdn.cloudflare.steamstatic.com/steam/subs/235874/header.jpg?t=1685051524');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px; /* Adjust the padding as needed */
+}

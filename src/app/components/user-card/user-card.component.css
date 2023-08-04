@@ -1,0 +1,29 @@
+.example-card {
+  background-color: #483247;
+  color: white;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent content from overflowing */
+
+  .mat-card-content {
+    flex: 1; /* Make the content expand to fill the available space */
+    overflow-y: auto; /* Add a vertical scrollbar if the content exceeds the card's height */
+  }
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.fixed-size-image {
+  width: 300px !important; /* Set the desired width for the image */
+  height: 250px !important; /* Set the desired height for the image */
+  object-fit: cover; /* This ensures the image retains its aspect ratio and fills the container */
+}
+button{
+  color: white !important;
+}
+mat-card-subtitle{
+  color: white !important;
+}

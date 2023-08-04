@@ -1,0 +1,25 @@
+/* styles.css */
+.description-panel {
+  max-width: 1900px; /* Customize the max width of the panel */
+  margin: 20px auto; /* Center the panel horizontally */
+  padding: 20px; /* Add padding inside the panel */
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.app-project-description{
+  background-color: #483247;
+  margin: 20px auto; /* Center the panel horizontally */
+  padding: 20px; /* Add padding inside the panel */
+
+}
+
+.app-project-description p{
+  font-size: 24px;
+
+}
+mat-card-title{
+  font-size: 28px;
+  margin-bottom: 10%;
+}

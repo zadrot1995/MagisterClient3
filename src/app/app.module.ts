@@ -21,6 +21,12 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectsCardComponent } from './components/projects-card/projects-card.component';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
+import { ProjectDetailsDescriptionComponent } from './components/project-details-description/project-details-description.component';
+import { ProjectDetailsTechnplogyComponent } from './components/project-details-technplogy/project-details-technplogy.component';
+import {NgOptimizedImage} from "@angular/common";
+import { UserCardComponent } from './components/user-card/user-card.component';
+import { ProjectDetailsBannerComponent } from './components/project-details-banner/project-details-banner.component';
 
 const routes: Routes = [
   {
@@ -47,6 +53,10 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectsComponent,
   },
+  {
+    path: 'projects/project-details',
+    component: ProjectDetailsComponent,
+  },
   ];
 @NgModule({
   declarations: [
@@ -60,7 +70,12 @@ const routes: Routes = [
     PointsComponent,
     SidenavComponent,
     ProjectsComponent,
-    ProjectsCardComponent
+    ProjectsCardComponent,
+    ProjectDetailsComponent,
+    ProjectDetailsDescriptionComponent,
+    ProjectDetailsTechnplogyComponent,
+    UserCardComponent,
+    ProjectDetailsBannerComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +88,8 @@ const routes: Routes = [
     MatCardModule,
     MatInputModule,
     MatSidenavModule,
-    MatGridListModule
+    MatGridListModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]
