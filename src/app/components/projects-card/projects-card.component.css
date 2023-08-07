@@ -1,7 +1,8 @@
 .example-card {
   background-color: #483247;
   color: white;
-  max-width: 400px;
+  width: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   overflow: hidden; /* Prevent content from overflowing */
@@ -21,4 +22,19 @@ button{
 }
 mat-card-subtitle{
   color: white !important;
+}
+.card-image{
+  object-fit: cover; /* Resize the image while maintaining aspect ratio */
+
+  width: 400px; /* Set the desired width */
+  height: 200px; /* Set the desired height */
+  overflow: hidden;
+}
+.app-description{
+  max-height: 400px; /* Set the desired maximum height for 3 lines of text */
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+  display: -webkit-box; /* Use the old flexbox spec for compatibility */
+  -webkit-line-clamp: 8; /* Limit the text to 3 lines */
+  -webkit-box-orient: vertical;
 }

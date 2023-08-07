@@ -1,0 +1,21 @@
+.app-project-technology{
+
+}
+.description-panel {
+  max-width: 1900px; /* Customize the max width of the panel */
+  margin: 20px auto; /* Center the panel horizontally */
+  padding: 20px; /* Add padding inside the panel */
+  background-color: #48324796;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+}
+
+.fixed-size-image {
+  width: 400px !important; /* Set the desired width for the image */
+  height: 500px !important; /* Set the desired height for the image */
+  object-fit: cover; /* This ensures the image retains its aspect ratio and fills the container */
+}

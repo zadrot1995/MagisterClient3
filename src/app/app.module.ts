@@ -27,6 +27,10 @@ import { ProjectDetailsTechnplogyComponent } from './components/project-details-
 import {NgOptimizedImage} from "@angular/common";
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { ProjectDetailsBannerComponent } from './components/project-details-banner/project-details-banner.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import {MatListModule} from "@angular/material/list";
+import {MatChipsModule} from "@angular/material/chips";
+import {MatLegacyChipsModule} from "@angular/material/legacy-chips";
 
 const routes: Routes = [
   {
@@ -57,6 +61,10 @@ const routes: Routes = [
     path: 'projects/project-details',
     component: ProjectDetailsComponent,
   },
+  {
+    path: 'user-profile',
+    component: UserProfileComponent,
+  },
   ];
 @NgModule({
   declarations: [
@@ -75,7 +83,8 @@ const routes: Routes = [
     ProjectDetailsDescriptionComponent,
     ProjectDetailsTechnplogyComponent,
     UserCardComponent,
-    ProjectDetailsBannerComponent
+    ProjectDetailsBannerComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +98,10 @@ const routes: Routes = [
     MatInputModule,
     MatSidenavModule,
     MatGridListModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    MatListModule,
+    MatChipsModule,
+    MatLegacyChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
