@@ -1,0 +1,9 @@
+.list-card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #48324796;
+  color: white;
+  min-height: 100%;
+}

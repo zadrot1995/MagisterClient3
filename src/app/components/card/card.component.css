@@ -1,0 +1,21 @@
+.card {
+  padding: 8px;
+  cursor: grab;
+  background-color: #483247;
+  color: white;
+  margin-top: 10px;
+
+}
+.user-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.card-description{
+  max-height: 50px; /* Set the desired maximum height for 3 lines of text */
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+  display: -webkit-box; /* Use the old flexbox spec for compatibility */
+  -webkit-line-clamp: 2; /* Limit the text to 3 lines */
+  -webkit-box-orient: vertical;
+}

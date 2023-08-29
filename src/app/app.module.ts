@@ -31,6 +31,10 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import {MatListModule} from "@angular/material/list";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatLegacyChipsModule} from "@angular/material/legacy-chips";
+import { BoardComponent } from './components/board/board.component';
+import { CardComponent } from './components/card/card.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ListComponent } from './components/list/list.component';
 
 const routes: Routes = [
   {
@@ -65,6 +69,10 @@ const routes: Routes = [
     path: 'user-profile',
     component: UserProfileComponent,
   },
+  {
+    path: 'projects/project-details/board',
+    component: BoardComponent,
+  },
   ];
 @NgModule({
   declarations: [
@@ -84,7 +92,10 @@ const routes: Routes = [
     ProjectDetailsTechnplogyComponent,
     UserCardComponent,
     ProjectDetailsBannerComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    BoardComponent,
+    CardComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -101,7 +112,8 @@ const routes: Routes = [
     NgOptimizedImage,
     MatListModule,
     MatChipsModule,
-    MatLegacyChipsModule
+    MatLegacyChipsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
