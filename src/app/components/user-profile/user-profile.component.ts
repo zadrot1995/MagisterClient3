@@ -15,4 +15,7 @@ export class UserProfileComponent {
     projects: ['Project X', 'Project Y', 'Project Z'],
     skills: ['Angular', 'JavaScript', 'HTML', 'CSS']
   };
+  constructor() {
+    window.scrollTo(0, 0);
+  }
 }
