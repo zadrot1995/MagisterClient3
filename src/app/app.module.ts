@@ -35,6 +35,11 @@ import { BoardComponent } from './components/board/board.component';
 import { CardComponent } from './components/card/card.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ListComponent } from './components/list/list.component';
+import { TaskDetailsModalComponent } from './components/task-details-modal/task-details-modal.component';
+import {MatDialog, MatDialogModule, MatDialogRef} from "@angular/material/dialog";
+import { CommentFormComponent } from './components/comment-form/comment-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { CommentListComponent } from './components/comment-list/comment-list.component';
 
 const routes: Routes = [
   {
@@ -95,7 +100,10 @@ const routes: Routes = [
     UserProfileComponent,
     BoardComponent,
     CardComponent,
-    ListComponent
+    ListComponent,
+    TaskDetailsModalComponent,
+    CommentFormComponent,
+    CommentListComponent
   ],
   imports: [
     BrowserModule,
@@ -109,11 +117,14 @@ const routes: Routes = [
     MatInputModule,
     MatSidenavModule,
     MatGridListModule,
+    // MatDialogRef<TaskDetailsModalComponent>,
     NgOptimizedImage,
     MatListModule,
     MatChipsModule,
     MatLegacyChipsModule,
-    DragDropModule
+    DragDropModule,
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

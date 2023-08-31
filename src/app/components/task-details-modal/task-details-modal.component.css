@@ -1,0 +1,14 @@
+.card {
+    padding: 20px;
+    cursor: grab;
+    background-color: #483247;
+    color: white;
+}
+.user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.card-description{
+    max-height: 50px; /* Set the desired maximum height for 3 lines of text */
+}
