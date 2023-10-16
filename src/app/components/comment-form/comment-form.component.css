@@ -1,0 +1,14 @@
+.full-width{
+  width: 100%;
+}
+.comment-textarea{
+  background-color: #483247 !important;
+  color: #483247 !important;
+}
+mat-form-field{
+  background-color: #483247 !important;
+  color: #483247 !important;
+}
+.mdc-text-field--filled.mdc-text-field--disabled{
+  background-color: #483247 !important;
+}

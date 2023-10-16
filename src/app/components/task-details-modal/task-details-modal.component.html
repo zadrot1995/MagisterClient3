@@ -1,4 +1,4 @@
-<mat-card class="card" style="height: auto; width: 700px;">
+<mat-card class="card" style="max-height: 1900px; width: 1200px;">
 
   <mat-card-title>
     {{ data.title }}
@@ -7,18 +7,105 @@
 
   <mat-card-content style="margin-top: 30px;">
     <div class="row">
-      <div class="col-9">
-        <p class="card-description">Update user model, add new property - Name, Age, Last Update. Make them readonly</p>
+      <div class="col-8">
+        <div class="row">
+          <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        </div>
+        <div style="margin-top: 20px" class="row">
+          <div class="col-12">
+            <app-comment-form (commentAdded)="addComment($event)"></app-comment-form>
+            <app-comment-list [comments]="comments"></app-comment-list>
+          </div>
+        </div>
       </div>
-      <div class="col-3">
-        <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZmWkJDlW0kurZbXR5NZmJRmfVTF6KOBjHsQ&usqp=CAU" alt="User Photo" class="user-photo ">
+      <div class="col-4">
+        <form>
+        <div class="row">
+
+          <div class="col-12">
+<!--            <label for="assignedUser">Assigned to</label>-->
+            <mat-form-field style="width: 100%;" appearance="fill">
+              <mat-label>Choose an option</mat-label>
+              <mat-select id="assignedUser" [(value)]="selected">
+                <mat-option value="option1" class="margin-top app-main-color">
+                  <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZmWkJDlW0kurZbXR5NZmJRmfVTF6KOBjHsQ&usqp=CAU" alt="User Photo" class="user-photo ">
+                  <span class="app-main-color">
+                    Angela Wick
+                  </span>
+                </mat-option>
+                <mat-option value="option2" class="margin-top app-main-color">
+                  <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZmWkJDlW0kurZbXR5NZmJRmfVTF6KOBjHsQ&usqp=CAU" alt="User Photo" class="user-photo ">
+                  <span class="app-main-color">
+                    Patrick Folles
+                  </span>
+                </mat-option>
+                <mat-option value="option3" class="margin-top app-main-color">
+                  <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZmWkJDlW0kurZbXR5NZmJRmfVTF6KOBjHsQ&usqp=CAU" alt="User Photo" class="user-photo ">
+                  <span class="app-main-color">
+                    Jan Lee
+                  </span>
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+
+
+<!--          <div class="col-6">-->
+<!--            <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZmWkJDlW0kurZbXR5NZmJRmfVTF6KOBjHsQ&usqp=CAU" alt="User Photo" class="user-photo ">-->
+<!--          </div>-->
+        </div>
+
+
+          <div class="row">
+
+            <div class="col-6">
+              <!--            <label for="assignedUser">Assigned to</label>-->
+              <mat-form-field style="width: 100%;" appearance="fill">
+                <mat-label>Set priority</mat-label>
+                <mat-select [(value)]="selectedPriority">
+                  <mat-option value="low" class="margin-top app-main-color">
+                    <img mat-card-image src="https://cdn-icons-png.flaticon.com/512/3696/3696804.png" alt="User Photo" class="priority-photo ">
+                    <span class="app-main-color">
+                      Low
+                  </span>
+                  </mat-option>
+                  <mat-option value="medium" class="margin-top app-main-color">
+                    <img mat-card-image src="https://cdn-icons-png.flaticon.com/512/3696/3696804.png" alt="User Photo" class="priority-photo ">
+                    <span class="app-main-color">
+                    Medium
+                  </span>
+                  </mat-option>
+                  <mat-option value="hight" class="margin-top app-main-color">
+                    <img mat-card-image src="https://cdn-icons-png.flaticon.com/512/3696/3696804.png" alt="User Photo" class="priority-photo ">
+                    <span class="app-main-color">
+                    Hight
+                  </span>
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <!--            <label for="assignedUser">Assigned to</label>-->
+              <mat-form-field style="width: 100%;" appearance="fill">
+                <mat-label style=" color: #483247">Storypoints</mat-label>
+                <input matInput type="number" placeholder="Set storypoints">
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <button mat-raised-button class="app-main-pink app-white-text" style="height:50px">
+                <mat-icon style="color: white" class="app-white-text" matSuffix>save</mat-icon>
+                <span style="font-size: 20px">Save</span>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <app-comment-form (commentAdded)="addComment($event)"></app-comment-form>
-        <app-comment-list [comments]="comments"></app-comment-list>
-      </div>
-    </div>
+
   </mat-card-content>
 </mat-card>

@@ -1,7 +1,19 @@
 <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
-  <mat-form-field appearance="fill">
+  <div class="row">
+    <div class="col-11">
+
+  <mat-form-field class="full-width" appearance="fill" >
     <mat-label>Add a Comment</mat-label>
-    <textarea matInput formControlName="commentText"></textarea>
+    <textarea cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="1"
+              matInput formControlName="commentText"></textarea>
   </mat-form-field>
-  <button mat-button type="submit" [disabled]="commentForm.invalid">Add Comment</button>
+    </div>
+    <div class="col-1">
+    <button mat-fab class="app-main-pink" aria-label="Example icon button with a bookmark icon" type="submit" [disabled]="commentForm.invalid">
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>
+  </div>
 </form>

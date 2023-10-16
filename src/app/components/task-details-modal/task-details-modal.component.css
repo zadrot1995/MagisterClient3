@@ -9,6 +9,20 @@
     height: 50px;
     border-radius: 50%;
 }
+.priority-photo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
 .card-description{
     max-height: 50px; /* Set the desired maximum height for 3 lines of text */
 }
+.margin-top{
+  margin-top: 3%;
+}
+.header-image {
+  width: 24px; /* Adjust the width as needed */
+  height: 24px; /* Adjust the height as needed */
+  margin-right: 8px; /* Add some spacing between the image and text */
+}
+

@@ -1,3 +1,10 @@
-<div *ngFor="let comment of comments" class="comment">
-  {{ comment }}
+
+<div class="row comment" *ngFor="let comment of comments">
+  <div class="col-1">
+    <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZmWkJDlW0kurZbXR5NZmJRmfVTF6KOBjHsQ&usqp=CAU" alt="User Photo" class="user-photo ">
+  </div>
+  <div class="col-11">
+    <span>{{ comment }}</span>
+  </div>
+
 </div>

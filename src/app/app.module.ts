@@ -40,6 +40,9 @@ import {MatDialog, MatDialogModule, MatDialogRef} from "@angular/material/dialog
 import { CommentFormComponent } from './components/comment-form/comment-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { CommentListComponent } from './components/comment-list/comment-list.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {TextFieldModule} from "@angular/cdk/text-field";
 
 const routes: Routes = [
   {
@@ -124,7 +127,12 @@ const routes: Routes = [
     MatLegacyChipsModule,
     DragDropModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatInputModule,
+    TextFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
