@@ -14,3 +14,16 @@ mat-grid-tile {
 .row{
   margin-top: 10%;
 }
+.round-button {
+  position: fixed;
+  top: 100px; /* Adjust as needed for your design */
+  right: 50px; /* Adjust as needed for your design */
+  background-color: #ee6e73 !important;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 40px;
+  cursor: pointer;
+}

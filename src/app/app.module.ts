@@ -38,11 +38,19 @@ import { ListComponent } from './components/list/list.component';
 import { TaskDetailsModalComponent } from './components/task-details-modal/task-details-modal.component';
 import {MatDialog, MatDialogModule, MatDialogRef} from "@angular/material/dialog";
 import { CommentFormComponent } from './components/comment-form/comment-form.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CommentListComponent } from './components/comment-list/comment-list.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {TextFieldModule} from "@angular/cdk/text-field";
+import { CreateEditProjectComponent } from './components/create-edit-project/create-edit-project.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import { AddTeamateComponent } from './components/add-teamate/add-teamate.component';
+import { AddTeamateModalComponent } from './components/add-teamate-modal/add-teamate-modal.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { AddUserCardComponent } from './components/add-user-card/add-user-card.component';
+import { AddUserListComponent } from './components/add-user-list/add-user-list.component';
 
 const routes: Routes = [
   {
@@ -81,6 +89,11 @@ const routes: Routes = [
     path: 'projects/project-details/board',
     component: BoardComponent,
   },
+  {
+    path: 'projects/create-project',
+    component: CreateEditProjectComponent,
+  },
+
   ];
 @NgModule({
   declarations: [
@@ -106,34 +119,43 @@ const routes: Routes = [
     ListComponent,
     TaskDetailsModalComponent,
     CommentFormComponent,
-    CommentListComponent
+    CommentListComponent,
+    CreateEditProjectComponent,
+    PaginationComponent,
+    AddTeamateComponent,
+    AddTeamateModalComponent,
+    AddUserCardComponent,
+    AddUserListComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterOutlet,
-    RouterModule.forRoot(routes),
-    MatToolbarModule,
-    MatIconModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatInputModule,
-    MatSidenavModule,
-    MatGridListModule,
-    // MatDialogRef<TaskDetailsModalComponent>,
-    NgOptimizedImage,
-    MatListModule,
-    MatChipsModule,
-    MatLegacyChipsModule,
-    DragDropModule,
-    MatDialogModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatInputModule,
-    TextFieldModule
-  ],
+    imports: [
+        BrowserModule,
+        RouterOutlet,
+        RouterModule.forRoot(routes),
+        MatToolbarModule,
+        MatIconModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatCardModule,
+        MatInputModule,
+        MatSidenavModule,
+        MatGridListModule,
+        // MatDialogRef<TaskDetailsModalComponent>,
+        NgOptimizedImage,
+        MatListModule,
+        MatChipsModule,
+        MatLegacyChipsModule,
+        DragDropModule,
+        MatDialogModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatInputModule,
+        TextFieldModule,
+        FormsModule,
+        MatPaginatorModule,
+        MatProgressSpinnerModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

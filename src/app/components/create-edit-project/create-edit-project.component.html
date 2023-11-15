@@ -1,0 +1,99 @@
+<div class="container" style="margin-top: 10%; margin-bottom: 10%">
+
+  <mat-card class="description-panel">
+
+    <mat-card-content>
+      <form>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <span class="big-title-text app-white-text">Info</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="project-info">
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field class="half-width">
+                  <mat-label>Project's name</mat-label>
+                  <input matInput placeholder="Name">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field class="full-width">
+                  <mat-label>Description</mat-label>
+                  <textarea matInput
+                            cdkTextareaAutosize
+                            cdkAutosizeMinRows="5"
+                            [(ngModel)]="project.description"
+                            name="description"
+                            placeholder="Description"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 50px">
+          <div class="col-12 d-flex justify-content-center">
+            <span class="big-title-text app-white-text">Team</span>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-12">
+          <mat-grid-list cols="4" rowHeight="400">
+            <mat-grid-tile *ngFor="let user of project.team">
+              <app-user-card
+                userPhoto='{{user.photoUrl}}'
+                userName='{{user.name}}'
+                userPosition='{{user.position}}'>
+              </app-user-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <app-add-teamate [users]="project.team">
+              </app-add-teamate>
+            </mat-grid-tile>
+          </mat-grid-list>
+          </div>
+        </div>
+
+
+<!--        <mat-form-field>-->
+<!--          <mat-label>Team Members</mat-label>-->
+<!--          <mat-select [(ngModel)]="selectedPerson" (selectionChange)="addPerson()">-->
+<!--            <mat-option *ngFor="let person of people" [value]="person">{{ person }}</mat-option>-->
+<!--          </mat-select>-->
+<!--        </mat-form-field>-->
+
+<!--        <mat-chip-list>-->
+<!--          <mat-chip *ngFor="let person of project.team" (removed)="removePerson(person)">-->
+<!--            {{ person }} <mat-icon matChipRemove>cancel</mat-icon>-->
+<!--          </mat-chip>-->
+<!--        </mat-chip-list>-->
+
+<!--        <mat-form-field>-->
+<!--          <mat-label>Technologies</mat-label>-->
+<!--          <mat-select [(ngModel)]="selectedTechnology" (selectionChange)="addTechnology()">-->
+<!--            <mat-option *ngFor="let technology of technologies" [value]="technology">{{ technology }}</mat-option>-->
+<!--          </mat-select>-->
+<!--        </mat-form-field>-->
+
+<!--        <mat-chip-list>-->
+<!--          <mat-chip *ngFor="let tech of project.technologies" (removed)="removeTechnology(tech)">-->
+<!--            {{ tech }} <mat-icon matChipRemove>cancel</mat-icon>-->
+<!--          </mat-chip>-->
+<!--        </mat-chip-list>-->
+
+        <button mat-raised-button color="primary" (click)="createProject()">Create Project</button>
+      </form>
+
+
+    </mat-card-content>
+  </mat-card>
+
+</div>

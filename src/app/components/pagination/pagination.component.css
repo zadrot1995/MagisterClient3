@@ -1,0 +1,9 @@
+.demo-paginator {
+  width: 400px;
+  background-color:initial;
+  color: white !important;
+}
+.mat-mdc-paginator-icon{
+  color: white !important;
+  fill: white !important;
+}

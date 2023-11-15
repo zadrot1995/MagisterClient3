@@ -1,17 +1,18 @@
 .example-card {
   background-color: #483247;
   color: white;
-  width: 400px;
-  height: 500px;
+  width: 350px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   overflow: hidden; /* Prevent content from overflowing */
+}
 
   .mat-card-content {
     flex: 1; /* Make the content expand to fill the available space */
     overflow-y: auto; /* Add a vertical scrollbar if the content exceeds the card's height */
   }
-}
+
 
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
@@ -26,15 +27,23 @@ mat-card-subtitle{
 .card-image{
   object-fit: cover; /* Resize the image while maintaining aspect ratio */
 
-  width: 400px; /* Set the desired width */
+  width: 350px; /* Set the desired width */
   height: 200px; /* Set the desired height */
   overflow: hidden;
 }
 .app-description{
-  max-height: 400px; /* Set the desired maximum height for 3 lines of text */
+  margin-top: 10px;
+  max-height: 350px; /* Set the desired maximum height for 3 lines of text */
   overflow: hidden; /* Hide any overflow */
   text-overflow: ellipsis; /* Show ellipsis for overflow */
   display: -webkit-box; /* Use the old flexbox spec for compatibility */
-  -webkit-line-clamp: 8; /* Limit the text to 3 lines */
+  -webkit-line-clamp: 5; /* Limit the text to 3 lines */
+  -webkit-box-orient: vertical;
+}
+.app-project-card-title{
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+  display: -webkit-box; /* Use the old flexbox spec for compatibility */
+  -webkit-line-clamp: 1; /* Limit the text to 3 lines */
   -webkit-box-orient: vertical;
 }

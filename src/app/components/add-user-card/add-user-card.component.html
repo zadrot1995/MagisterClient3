@@ -1,0 +1,22 @@
+<!-- user-card.component.html -->
+<div class="user">
+  <div class="photo">
+    <img src="{{ user.photoUrl }}" alt="User Photo" />
+  </div>
+  <div class="details">
+    <div class="name">{{ user.name }}</div>
+    <div class="position">{{ user.position }}</div>
+  </div>
+  <div *ngIf="team.includes(user)">
+    <button class="round-button" (click)="Delete(user)" >
+      <mat-icon>remove</mat-icon>
+
+    </button>
+  </div>
+  <div *ngIf="!team.includes(user)">
+    <button class="round-button" (click)="Add(user)">
+      <mat-icon>add</mat-icon>
+
+    </button>
+  </div>
+</div>
