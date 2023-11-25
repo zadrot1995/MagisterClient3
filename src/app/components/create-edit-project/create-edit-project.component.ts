@@ -1,6 +1,6 @@
 import { MatSelectModule } from '@angular/material/select';
 import {CdkTextareaAutosize, TextFieldModule} from '@angular/cdk/text-field';
-import {Component, NgZone, ViewChild} from '@angular/core';
+import {Component, Input, NgZone, ViewChild} from '@angular/core';
 import {take} from 'rxjs/operators';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -13,17 +13,22 @@ import {User} from "../../interfaces/User";
 export class CreateEditProjectComponent {
 
 
-  public project: {
+  @Input() public project: {
+
     name: string;
+    category: string;
     description: string;
     team: User[]; // Change this to an array of strings
     technologies: string[]; // Change this to an array of strings
   } = {
     name: '',
+    category: '',
     description: '',
     team: [],
     technologies: [],
   };
+
+  categories: string[] = ['Web', 'Game Dev', 'Desktop', 'Mobile']; // Add your categories
 
   selectedPerson: User = {name:'', position: '', photoUrl: ''};
   selectedTechnology: string = '';
@@ -60,6 +65,7 @@ export class CreateEditProjectComponent {
     // Reset the form fields
     this.project = {
       name: '',
+      category: '',
       description: '',
       team: [],
       technologies: []
